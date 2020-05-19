@@ -96,10 +96,10 @@ const Topnav = (props) => {
               </NavLink>
             </NavItem>
             <div id="iconbar"  >
-    <a href="https://www.facebook.com/toxicmodelmgmt" target="_blank">
+    <a href="" target="_blank">
       <i class="fab fa-facebook fa-lg  mr-3"></i>
     </a>
-    <a href="https://www.instagram.com/toxicmodelmgmt" target="_blank">
+    <a href="" target="_blank">
       <i class="fab fa-instagram fa-lg mr-3"></i>
     </a>
   </div>
@@ -141,11 +141,12 @@ function LoginSucess() {
         <NavItem className="">
           <Button
             onClick={() => SetSidebarOpen(true)}
-            style={{color:"grey", background:"white", border:"1px solid white", fontSize:"26px"}}
-        
+            style={{color:"grey", background:"white", border:"1px solid #701179", fontSize:"26px"}}
+          outline
             
           >
-             GET SCOUTED
+            <i className="fa fa-shopping-cart fa-xs " style={{color:"#701179"}}>  </i>
+              Cart
           </Button>
         </NavItem>
       </React.Fragment>

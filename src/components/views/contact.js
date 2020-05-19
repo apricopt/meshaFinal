@@ -103,14 +103,14 @@ axios({
               <p className="text-muted mb-4">Feel free to contact us.We will be happy to listen to you.</p>
                 <p className="mb-2"><a href="#">Contact support</a></p>
                 <p className="font-weight-bold">Phone:</p>
-              <p className="mb-2">+ 5532991851709</p>
+              <p className="mb-2">+ 12345678</p>
             
               <p className="font-weight-bold">WeChat:</p>
               <p className="mb-2">toxicmodelmgmt</p>
               <p className="font-weight-bold">Email:</p>
-              <p className="mb-2"><a href="#">models@toxicmodelmgmt.com</a></p>
+              <p className="mb-2"><a href="#">shop@meshafashion.com</a></p>
               <p className="font-weight-bold">Address:</p>
-              <p className="mb-2">Juiz de Fora-MG, Brazil</p>
+              <p className="mb-2">Adress will come here</p>
             </div>
             {/*Grid column*/}
             {/*Grid column*/}

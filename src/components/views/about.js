@@ -17,22 +17,19 @@ function About() {
             </div>
             <div class="col-md-5 d-flex align-items-center">
               <div>
-                <h3 class="font-weight-bold mb-4">About Toixcmodelmgmt</h3>
+                <h3 class="font-weight-bold mb-4">About MeshaFashion</h3>
 
                 <p>
-                  Toxic Models Management is a scouting company, founded on
+                  MeshaFashion is a shopping website, founded on
                   2012.
                 </p>
                 <p>
-                    With  a deep understanding of the fashion market from their founders. Years of traveling and working experience in different markets gave toxic's founders a wide and comprehensive perspective of how the scouting fiels could improve it's functioning.
-
+                    some content here  some content here some content here some content here some content here some content here some content here some content here some content here some content here
                 </p>
                 <p>
-                    Instead of quantity, Toxic is known and respected for the superior scouting level and the consistent ability to determine the correct development strategy for each of our models.
-                    We seek of fulfill the needs of fashion markets with a new concept of management, leading our models to successful careers.
+                some content here some content here some content here some content here some content here some content here some content here some content here some content here some content here some content here some content here
                     <hr />
-                    Dynamic and discriplined.
-                    Welcome to TOXIC MODELS MANAGEMENT.                 
+                    some content here some content here some content here some content here                
                 </p>
 
                

@@ -84,7 +84,7 @@ function MainHome() {
         <Slider />
 
         <div className="container-fluid">
-          <h2 class="maintitle">oxicmodelmgmt Represents</h2>
+          <h2 class="maintitle">MeshaFashion Represents</h2>
           <h5 class="subtitle">
             The arrival that will change the way you think
           </h5>
@@ -122,7 +122,7 @@ function MainHome() {
           <Row className="my-5" label="thirdRow">
             <Col md="10" className="offset-1  p-1">
             <div className="titleContainermini">
-                <h4>Most Recent</h4>
+                <h4>Most Recent Products</h4>
               </div>
              <div id="recent"></div>
             </Col>
@@ -139,7 +139,7 @@ function MainHome() {
             </Col>
             <Col md="5" className=" p-1">
             <div className="titleContainermini">
-                <h4>Events</h4>
+                <h4>Sales</h4>
               </div>
              <div id="events"></div>
             </Col>

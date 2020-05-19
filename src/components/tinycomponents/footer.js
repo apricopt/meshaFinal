@@ -27,7 +27,7 @@ function Footer() {
 
     
     <div class="pb-4" id="iconbar">
-      <a href="https://www.facebook.com/toxicmodelmgmt" target="_blank">
+      <a href="" target="_blank">
         <i class="fab fa-facebook-f mr-3"></i>
       </a>
 
@@ -41,7 +41,7 @@ function Footer() {
 
  
     <div class="footer-copyright py-3 text-primary">
-      © 2020 Copyright: Toxicmodelmgmt
+      © 2020 Copyright: MeshaFashion
      
     </div>
     
