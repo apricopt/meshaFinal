@@ -6,7 +6,7 @@ export const DetailbarContext = createContext();
 
 
 export const DetailbarProvider = (props) => {
-    const [detailbar , setDetailbar] = useState(false);
+    const [detailbar , setDetailbar] = useState(true);
 
 
 

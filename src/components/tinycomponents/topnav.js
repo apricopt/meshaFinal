@@ -141,12 +141,12 @@ function LoginSucess() {
         <NavItem className="">
           <Button
             onClick={() => SetSidebarOpen(true)}
-            style={{color:"grey", background:"white", border:"1px solid #701179", fontSize:"26px"}}
+            style={{color:"grey", background:"white", border:"1px solid #701179", fontSize:"20px"}}
           outline
             
           >
-            <i className="fa fa-shopping-cart fa-xs " style={{color:"#701179"}}>  </i>
-              Cart
+            <i className="fa fa-shopping-cart fa-xs  " style={{color:"#701179"}}>   </i>
+               Cart
           </Button>
         </NavItem>
       </React.Fragment>

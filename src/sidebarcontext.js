@@ -6,7 +6,7 @@ export const SidebarContext = createContext();
 
 
 export const SidebarProvider = (props) => {
-    const [sidebar , setSidebar] = useState(false);
+    const [sidebar , setSidebar] = useState(true);
 
 
 

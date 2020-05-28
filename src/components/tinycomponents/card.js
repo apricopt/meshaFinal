@@ -1,8 +1,9 @@
-import React , {useContext} from 'react';
+import React , {useContext , useState} from 'react';
 
 //importing the context of sidebars
 import {DetailbarContext} from '../../detailbarcontext';
 import {ModelCarrierContext} from '../../modelcontext';
+import {CartContext} from '../../cartcontext';
 
 
 
@@ -12,57 +13,78 @@ import {
 } from 'reactstrap';
 
  export const Cardz = (props) => {
+
+  const [cart , setCart] = useContext(CartContext);
+const [add , setAdded] = useState(["Add to Cart" , false]);
+
+   function added(e) {
+     setAdded(["Added" , true])
+     let cardaya = e.target.parentNode.parentNode;
+   
+
+     let productaya = {
+      productId: "null",
+      productImg: cardaya.children[0].src,
+      productName: cardaya.children[1].children[0].innerText,
+      productPrice: cardaya.children[1].children[1].innerText,
+
+
+  }
+  
+  setCart( {     
+   status : true, 
+     products : cart.products.concat(productaya)
+});
+
+  console.log("yeh hal hai card ka " , cart);
+
+
+
+;   }
+
+let style = {
+ 
+  background: add[1] ? "green" : "blue",
+
+}
   return (
     <div class="cardz">
       <Card >
         <CardImg top width="100%" src={props.image} alt="Card image cap" />
         <CardBody>
-        <CardTitle></CardTitle>
-        
-   
+        <CardTitle>{props.title}</CardTitle>
+        <CardSubtitle>Price:</CardSubtitle>
+          <CardText>okay so here is the text for the description</CardText>
+          
+          <Button style={style} onClick={added}>{add[0]}</Button>
+  
         </CardBody>
       </Card>
     </div>
   );
-};
-
-
-
- export const CardModel = (props) => {
-   
-  const [detailbar , setDetailbar] = useContext(DetailbarContext);
-  const [modelCarrier , setModelCarrier] = useContext(ModelCarrierContext);
-
-
-  function SetDetailbarOpen(open , event) {
-    setModelCarrier(props.model);
-    setDetailbar((prev) => !prev);
-    console.log(" i am called" ,event.target.id);
-    console.log("and the model data is this" , props.model);
   
-  }
-
-
-
-
-
-  return (
-    <div class="priders">
-    <img src={props.image} /> 
-    <div class="pop" onClick={(event) => SetDetailbarOpen(true, event)} id={[props.model]}>
-  <i  class="fa  mt-5" ><span class="fa fa-dot-circle"></span> Height:{props.height}cm</i>
-     <i class="fa "><span class="fa fa-dot-circle"></span>  Bust:{props.chest}cm</i>
-  <i class="fa "><span class="fa fa-dot-circle"></span>  Waist:{props.waist}cm</i>
-  <i class="fa "><span class="fa fa-dot-circle"></span>  Hips:{props.hips}cm</i>
-  <i class="fa "><span class="fa fa-dot-circle"></span>  Eyes:{props.eye}</i>
-  <i class="fa "><span class="fa fa-dot-circle"></span>  Hair:{props.hair}</i>
-   
-
-    </div>
-   <div class="text">
-     <h5>{props.title}</h5>
-   </div>
- </div>
-  );
 };
+
+
+
+export const CartCardz = (props) => {
+  return (
+    <div class="cartcardz">
+      <Card >
+        <CardImg top width="100%" src={props.productImg} alt="Card image cap" />
+        <CardBody>
+        <CardTitle>{props.productName}</CardTitle>
+  <CardSubtitle>Price:{props.productPrice}</CardSubtitle>
+          <CardText>okay so here is the text for the description</CardText>
+          
+          <Button color="danger">Remove from Cart</Button>
+  
+
+        </CardBody>
+      </Card>
+    </div>
+  );
+  
+};
+
 

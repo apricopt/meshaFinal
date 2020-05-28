@@ -15,12 +15,12 @@
 }
 
 body {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Comfortaa', cursive;
 }
 
 .m_text {
   color: grey !important;
-  font-size: x-large;
+  font-size: large;
 }
 
 .btn-grey {
@@ -32,8 +32,7 @@ body {
 }
 
 #iconbar a {
-  color: #701179
-  !important;
+  color: grey !important;
 }
 
 #iconbar a:hover {
@@ -144,8 +143,7 @@ body {
 .maintitle {
   padding-top: 40px;
   text-align: center;
-  color: #701179
-  ;
+  color: red;
 }
 
 .subtitle {
@@ -154,20 +152,17 @@ body {
 
 #recent {
   height: 400px;
-  background-color: #7011797e
-  ;
+  background-color: #929292;
 }
 
 #news {
   height: 400px;
-  background-color: #7011797e
-  ;
+  background-color: gray;
 }
 
 #events {
   height: 400px;
-  background-color: #7011797e
-  ;
+  background-color: #646464;
 }
 
 .fa-female {
@@ -266,7 +261,7 @@ body {
 }
 
 .titleContainer {
-  border: 1px solid #701179 ;
+  border: 1px solid grey;
   padding: 30px 0px;
 }
 
@@ -281,7 +276,7 @@ body {
 .titleContainer h4 {
   text-shadow: 0px 0px 5px white;
   text-align: center;
-  background-color: #701179  ;
+  background-color: #94949c;
 }
 
 .titleContainermini {
@@ -342,5 +337,36 @@ button.close {
   z-index: 2;
   padding-right: 1rem;
   padding-top: .6rem;
+}
+.shopbar {
+  height: 100vh;
+  background: #8a2be21f;
+  width: 100%;
+  position: -webkit-sticky;
+}
+
+.shopbar button {
+  margin: 0px;
+}
+
+.cardz {
+  margin-top: 10px;
+}
+
+.cardz img {
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.cartcardz {
+  margin-top: 10px;
+  color: black;
+}
+
+.cartcardz img {
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 /*# sourceMappingURL=App.css.map */

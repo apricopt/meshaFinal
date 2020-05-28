@@ -3,6 +3,8 @@ import Topnav from './tinycomponents/topnav';
 import Footer from './tinycomponents/footer';
 import TopHeader from './tinycomponents/topheader';
 
+import SidebarBag from './tinycomponents/sidebar';
+
 import Women from './views/women';
 import Men from './views/men';
 import Contact from './views/contact';
@@ -21,7 +23,7 @@ import MainHome from './views/home'
 import { LoginProvider } from '../logincontext';
 import {SidebarProvider} from '../sidebarcontext';
 import {DetailbarProvider} from '../detailbarcontext';
-
+import {CartProvider} from '../cartcontext';
 
 
 
@@ -36,9 +38,8 @@ import './App.css';
 
 
 
-import { StickyContainer, Sticky } from 'react-sticky';
-import SidebarBag from './tinycomponents/sidebar';
-import {Detailbar} from './tinycomponents/sidebar'
+
+
 
 function App() {
   
@@ -48,33 +49,34 @@ function App() {
   return (
    
     <Router>
-   
+   <CartProvider>
       <SidebarProvider>
-        <DetailbarProvider>
-        
+       
+      <DetailbarProvider>
    
       <LoginProvider>
 
       <TopHeader />
      
       <Topnav />
-      <div >
-        <Detailbar />
-      <SidebarBag />
-      </div>
+    
+       
+      
       <div className="App">
+      <SidebarBag />
         
-     
+    
       <Switch> 
-
+    
         <Route  path={"/"} exact component={MainHome} />
         <Route  path={"/women"} exact component={Women} />
         <Route  path={"/men"} exact component={Men} />
+       
         <Route  path={"/about"} exact component={About} />
         <Route  path={"/contact"} exact component={Contact} />
-        <Route  path={"/login"} exact component={Login} />
-        <Route  path={"/register"} exact component={Register} />
+       
       </Switch>
+   
     
   
       <Footer />
@@ -91,6 +93,7 @@ function App() {
      
       </DetailbarProvider>
       </SidebarProvider>
+      </CartProvider>
      
     </Router>
   );
