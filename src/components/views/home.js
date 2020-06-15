@@ -30,7 +30,7 @@ function MainHome() {
         <Col md="10">
              <ShopZone/> 
         </Col>
-        </Row>s
+        </Row>
         </StickyContainer>
 
         </div>

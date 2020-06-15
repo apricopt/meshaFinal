@@ -3,10 +3,11 @@ import Sidebar from "react-sidebar";
 import { CartContext } from "../../cartcontext";
 import { SidebarContext } from "../../sidebarcontext";
 import {CartCardz} from './card';
+import { NavLink  } from "react-router-dom";
 
 import { Row, Col } from "reactstrap";
 import { DetailbarContext } from "../../detailbarcontext";
-import {ModelCarrierContext} from "../../modelcontext";
+
 
 const axios = require('axios');
 
@@ -32,7 +33,18 @@ function SidebarBag() {
           </button>⁰
 
           <hr />
-          <button className="btn btn-block btn-warning" >Proceed to checkout</button>
+          <NavLink
+              
+                exact
+                to={"/checkout"}
+                activeClassName="active"
+                className="btn btn-block btn-warning"
+              >
+                Proceed to checkout
+              </NavLink>
+
+
+
           <InsideSidebar />
         </div>
       }
@@ -62,8 +74,9 @@ function InsideSidebar() {
 let data = "";
   
   const [cart , setCart] = useContext(CartContext);
-  const [ready , setReady]= useState(false);
+  
 
+ 
 
   // console.log("yeh hall ha sidebar ka " , cart)
 
@@ -73,22 +86,23 @@ console.log(cart.status , cart.products)
      data = cart.products.map( item =>
       (
        <div className="p-2">
-      <CartCardz productName={item.productName} productImg={item.productImg}  productPrice={item.productPrice}/>     </div>
+      <CartCardz productName={item.Name} productImg={item.image}  productPrice={item.price}/>     </div>
     ) 
-    , () => {
-      setReady(true)
-      console.log("g ma tru kar choreya")
-    } )
+    )
+    
+  
+   
+   
    
     
-    console.log("g mai yeh render karnay laga hun" , data)
+    console.log("g yeh hai data ka keyword abhi filhal " , data)
    
     }
    
  return(
  <div>
 
-   { data  }
+   { data.length!==0 ?  data : <h3 className="mt-5 text-center">Cart seems to be empty!</h3>   }
 
    </div>
  

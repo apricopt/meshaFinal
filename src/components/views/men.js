@@ -1,6 +1,6 @@
 import React ,{useContext , useEffect , useState} from "react";
 import {CardModel } from "../tinycomponents/card";
-import {MaleContext }from "../../modelcontext";
+
 
 
 

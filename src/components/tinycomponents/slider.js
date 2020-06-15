@@ -19,9 +19,13 @@ import {
 
 
 
-import Background1 from '../images/slide1.jpg';
-import Background2 from '../images/slide22.jpg';
-import Background3 from '../images/slide3.jpg';
+import Background1 from '../images/slide1.jpeg';
+import Background2 from '../images/slide2.jpeg'
+import Background5 from '../images/slidehijab.jpeg';
+import Background4 from '../images/slide22.jpg';
+
+import Background3 from '../images/slideshoes.jpeg';
+
 
 
 
@@ -45,7 +49,11 @@ export function Slider() {
     >
       <div data-src={Background1} />
       <div data-src={Background2} style={{}} />
+   
       <div data-src={Background3} />
+      <div data-src={Background4} />
+      <div data-src={Background5} />
+     
     </AutoplaySlider>
   );
 

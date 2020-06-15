@@ -1,3 +1,7 @@
+.text-purple {
+  color: purple;
+}
+
 .btn-grey {
   background: grey;
 }
@@ -256,7 +260,7 @@ body {
 /* home ends */
 /* Footer starts */
 #mainfooter {
-  background-color: #d8d8d8c7;
+  background-color: #dbb7f3c7;
   color: wheat;
 }
 
@@ -340,9 +344,10 @@ button.close {
 }
 .shopbar {
   height: 100vh;
-  background: #8a2be21f;
+  background: #ffffff1f;
   width: 100%;
   position: -webkit-sticky;
+  overflow: auto;
 }
 
 .shopbar button {
@@ -350,23 +355,169 @@ button.close {
 }
 
 .cardz {
-  margin-top: 10px;
+  height: 350px;
+  border: 1px solid purple;
+  padding: 5px;
+  margin: 10px 0px;
+  border-radius: 3px;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
+  -webkit-transition: border-radius 0.5s;
+  transition: border-radius 0.5s;
 }
 
-.cardz img {
-  height: 200px;
-  -o-object-fit: contain;
-     object-fit: contain;
+.cardz:hover {
+  -webkit-box-shadow: 0px 0px 10px purple;
+          box-shadow: 0px 0px 10px purple;
+  border-radius: 3px 20px 1px 7px;
+}
+
+.btn-modal {
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+
+.cardz:hover .btn-modal {
+  opacity: 1;
+}
+
+.productImage {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.priceTag {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.cardz:hover .productImage {
+  -webkit-transform: scale(1.1) translatey(-10px);
+          transform: scale(1.1) translatey(-10px);
+  height: 300px;
+}
+
+.cardz:hover .priceTag {
+  color: purple;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
 }
 
 .cartcardz {
   margin-top: 10px;
   color: black;
+  border: 1px solid purple !important;
 }
 
 .cartcardz img {
   height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.btn-featured {
+  background: purple !important;
+  color: #f1f1f1 !important;
+  margin: 0px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.btn-main {
+  background: #d376d3 !important;
+  color: black !important;
+  margin: 0px !important;
+}
+
+.btn-sub {
+  background: #cea9ce !important;
+  color: black  !important;
+}
+
+.card-img {
+  width: 300px !important;
+  height: 600px;
+}
+
+#maintitle {
+  color: #2a2a2a;
+  font-size: 1.8rem;
+  line-height: 0.2;
+  letter-spacing: 0.196em;
+  font-weight: 800;
+}
+
+#subtitle {
+  color: purple;
+  border: 1px solid purple;
+  padding: 10px 0px;
+}
+
+.modalMain {
+  background: green;
+}
+
+.modalMain .btn-radio {
+  height: 60px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  -webkit-box-shadow: 0px 0px 4px purple !important;
+          box-shadow: 0px 0px 4px purple !important;
+  color: purple !important;
+}
+
+.productManji {
+  height: 500px;
+}
+
+.mainModal {
+  background: #f2f2f2;
+  padding: 10px 0px;
+}
+
+.modalHeader {
+  background: #50006c;
+  color: white;
+}
+
+.modal-title {
+  font-size: 1.5rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.196em !important;
+}
+
+.modalDescription {
+  color: purple !important;
+  text-align: center;
+}
+
+.modalPrice {
+  font-size: 27px;
+  line-height: 75px;
+  text-align: center;
+}
+
+.modalFooter {
+  background: #cacaca;
+}
+
+.modalBody {
+  background: #4a0e60;
+}
+
+.input {
+  border: 1px solid purple;
+}
+
+.btn-block {
+  margin: 0px !important;
 }
 /*# sourceMappingURL=App.css.map */

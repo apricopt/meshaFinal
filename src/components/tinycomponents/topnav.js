@@ -47,7 +47,7 @@ const Topnav = (props) => {
               </NavLink>
             </NavItem>
 
-            <NavItem className="mx-3">
+            {/* <NavItem className="mx-3">
               <NavLink
                 tag={RRNavLink}
                 exact
@@ -57,8 +57,8 @@ const Topnav = (props) => {
               >
                 WOMEN
               </NavLink>
-            </NavItem>
-
+            </NavItem> */}
+{/* 
             <NavItem className="mx-3">
               <NavLink
                 tag={RRNavLink}
@@ -69,7 +69,7 @@ const Topnav = (props) => {
               >
                 MEN
               </NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem className="mx-3">
               <NavLink
                 tag={RRNavLink}
@@ -114,6 +114,7 @@ function LoginSucess() {
   
   const [login, setLogin] = useContext(LoginContext);
   const [sidebar, setSidebar] = useContext(SidebarContext);
+  const [cart , setCart] = useContext(CartContext);
 
   function SetSidebarOpen(open) {
     setSidebar((prev) => !prev);
@@ -146,7 +147,7 @@ function LoginSucess() {
             
           >
             <i className="fa fa-shopping-cart fa-xs  " style={{color:"#701179"}}>   </i>
-               Cart
+    Cart <span class="badge badge-light ">{cart.products.length}</span>
           </Button>
         </NavItem>
       </React.Fragment>

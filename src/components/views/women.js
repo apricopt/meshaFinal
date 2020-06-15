@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { CardModel } from "../tinycomponents/card";
-import { FemaleContext } from "../../modelcontext";
+
 
 //importing reactsrap
 import { Col, Row } from "reactstrap";

@@ -9,6 +9,7 @@ import Women from './views/women';
 import Men from './views/men';
 import Contact from './views/contact';
 import About from './views/about';
+import Checkout from './views/checkout'
 
 import Login from './views/login';
 import Register from './views/register';
@@ -20,10 +21,12 @@ import MainHome from './views/home'
 
 //importing contexts
 
-import { LoginProvider } from '../logincontext';
+
 import {SidebarProvider} from '../sidebarcontext';
 import {DetailbarProvider} from '../detailbarcontext';
 import {CartProvider} from '../cartcontext';
+import {ProductProvider , TitleProvider} from '../modelcontext';
+import {LoginProvider} from '../logincontext';
 
 
 
@@ -35,6 +38,7 @@ import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 //importing styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { LoginContext } from '../logincontext';
 
 
 
@@ -53,8 +57,9 @@ function App() {
       <SidebarProvider>
        
       <DetailbarProvider>
-   
-      <LoginProvider>
+   <LoginProvider>
+      <ProductProvider>
+        <TitleProvider>
 
       <TopHeader />
      
@@ -62,7 +67,7 @@ function App() {
     
        
       
-      <div className="App">
+      <div className="App container-fluid">
       <SidebarBag />
         
     
@@ -71,9 +76,10 @@ function App() {
         <Route  path={"/"} exact component={MainHome} />
         <Route  path={"/women"} exact component={Women} />
         <Route  path={"/men"} exact component={Men} />
-       
         <Route  path={"/about"} exact component={About} />
         <Route  path={"/contact"} exact component={Contact} />
+        <Route  path={"/checkout"} exact component={Checkout} />
+        
        
       </Switch>
    
@@ -86,7 +92,8 @@ function App() {
 
 
 
-
+      </TitleProvider>
+      </ProductProvider>
       </LoginProvider>
     
    

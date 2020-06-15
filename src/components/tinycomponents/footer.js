@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 function Footer() {
     return(
-        <div id="mainfooter" className="p-2 mt-4">
+        <div id="mainfooter" className="p-2 ">
 
 
 <footer class="page-footer text-center font-small info-color-dark">

@@ -1,33 +1,48 @@
 import React, { useState, createContext } from "react";
 
-export const MaleContext = createContext();
-export const FemaleContext = createContext();
-export const ModelCarrierContext = createContext();
+export const ProductContext = createContext();
+export const TitleContext = createContext();
 
-export const MaleProvider = (props) => {
-  const [male, setMale] = useState([""]);
+
+export const ProductProvider = (props) => {
+  const [product, setProduct] = useState([]);
   return (
-    <MaleContext.Provider value={[male, setMale]}>
+    <ProductContext.Provider value={[product, setProduct]}>
       {props.children}
-    </MaleContext.Provider>
+    </ProductContext.Provider>
   );
 };
 
-export const FemaleProvider = (props) => {
-  const [female, setFemale] = useState([""]);
+
+export const TitleProvider = (props) => {
+  const [title, setTitle] = useState("");
   return (
-    <FemaleContext.Provider value={[female, setFemale]}>
+    <TitleContext.Provider value={[title, setTitle]}>
       {props.children}
-    </FemaleContext.Provider>
+    </TitleContext.Provider>
   );
 };
 
-export const ModelCarrierProvider = (props) => {
-  const [modelCarrier , setModelCarrier] = useState(["carry karnay wali sarkar"]);
-  return (
-    <ModelCarrierContext.Provider value={[modelCarrier, setModelCarrier]}>
-      {props.children}
-    </ModelCarrierContext.Provider>
-  );
 
-}
+
+
+
+
+// export const FemaleProvider = (props) => {
+//   const [female, setFemale] = useState([""]);
+//   return (
+//     <FemaleContext.Provider value={[female, setFemale]}>
+//       {props.children}
+//     </FemaleContext.Provider>
+//   );
+// };
+
+// export const ModelCarrierProvider = (props) => {
+//   const [modelCarrier , setModelCarrier] = useState(["carry karnay wali sarkar"]);
+//   return (
+//     <ModelCarrierContext.Provider value={[modelCarrier, setModelCarrier]}>
+//       {props.children}
+//     </ModelCarrierContext.Provider>
+//   );
+
+// }
